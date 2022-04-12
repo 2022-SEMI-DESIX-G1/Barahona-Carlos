@@ -16,7 +16,7 @@ function transform(str){
      var respuesta1 = Palindrome(str)
       var respuesta2 = Palindrome(num)
      var resupuesta4 = "no es palindromo de doble base"
-     if(respuesta1 == "Es palindromo" , respuesta2 =="Es palindromo") {
+     if(respuesta1 == "Es palindromo" && respuesta2 =="Es palindromo") {
       var respuesta4 = "Es palindromo de doble base"
 }
      else{
