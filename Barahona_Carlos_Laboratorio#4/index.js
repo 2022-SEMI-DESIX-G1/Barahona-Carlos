@@ -43,7 +43,7 @@ function getCard(clickd_id){
    e.remove(clickd_id); 
   }
   else{
-  //alert('No se elimino este elemento.');
+  //alert('No se elimino este elemento');
 }
  
  //
