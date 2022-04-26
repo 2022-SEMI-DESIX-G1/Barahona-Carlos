@@ -12,10 +12,7 @@ fibonacci[0] = 0;
 fibonacci[1] = 1;
 for (let i = 2; i < int; i++) {
   fibonacci[i] = fibonacci[i - 2] + fibonacci[i - 1];
-
-
- 
-}console.log(fibonacci)
+}
   //create element
   for(let h = 0; h < fibonacci.length; h++){
       var tag = document.createElement("div");
@@ -33,7 +30,6 @@ for (let i = 2; i < int; i++) {
   element.appendChild(tag);
 }
 }
-
 //Delete clicked elements
 function getCard(clickd_id){
  const e = document.getElementById(clickd_id);
