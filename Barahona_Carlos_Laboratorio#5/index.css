@@ -1,0 +1,114 @@
+body{
+    padding-top:10%
+}
+#form-container{
+display:flex;
+flex-direction:column;
+margin: auto;
+width: 45%;
+min-width:270px;
+max-width: 400px;
+padding: 1rem;
+background-color: white;
+border-radius:10px;
+box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.45);
+margin-bottom: 2rem;
+}
+#form{
+
+    display:flex;
+    flex-direction:column;
+    min-width:200px
+}
+h3{
+    font-weight: 300;
+    font-family: fantasy;
+    font-size:2rem;
+    margin: auto;
+    padding-bottom: 1rem;
+}
+input{
+    background-color: rgba(199, 230, 240, 0.986);
+    font-weight: 500;
+    border-width: 1px;
+    border-radius:4px;
+    height: 2rem;
+    margin: auto;
+    margin-bottom:1rem;
+    padding: 10px
+}
+::placeholder{
+ opacity: 30%;
+
+}
+
+button{
+    text-align:center;
+    align-self: center;
+    background-color:rgb(11, 147, 124);
+    color:white;
+    font-size: 100%;
+    font-family: fantasy;
+    padding: 1rem;
+    border-radius:4px;
+    width:35%;
+  
+}
+button:hover{
+    text-align:center;
+    align-self: center;
+    background-color:rgb(126, 160, 154);
+    color:rgba(12, 12, 12, 0.726);
+    font-size: 100%;
+    font-family: fantasy;
+    padding: 1rem;
+    border-radius:4px;
+    width:35%;
+    
+}
+#output-container{
+    flex-direction: row;
+    padding: 1rem;
+    width: 90%;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.card{
+    font-weight: 100;
+    font-family: fantasy;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius:5px;
+    box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.45);
+    opacity: 0;
+    
+    
+}
+.card:hover{
+    font-weight: 100;
+    font-family: fantasy;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius:5px;
+    box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.45);
+    cursor:pointer;
+    
+    
+}
+div{
+    animation: fadeIn 3s;
+    -webkit-animation: fadeIn 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
