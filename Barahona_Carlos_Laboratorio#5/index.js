@@ -19,9 +19,11 @@
       },
       handlers: {
           onCardClick: (e) => {
-              if(e.target.className === 'card') {
-                  e.target.remove();
-              }
+             const yes = window.confirm('Are you sure you want Delete this Card?');
+              if(yes) {
+                  if(e.target.className === 'card') {
+                     e.target.remove();
+              }}
           },
           onFormSubmit: (e) => {
               e.preventDefault();
