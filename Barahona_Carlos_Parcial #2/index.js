@@ -82,6 +82,7 @@
         if (document.querySelector("#infoBox"))
           document.querySelector("#infoBox").style.display = "none";
         document.querySelector("#pokemon-finder-query").value = "";
+        document.getElementById('clean').style.visibility = 'hidden';
       },
 
     },
