@@ -10,24 +10,30 @@ body {
 }
 
 #formContiner {
+    display: flex;
     background-color: #F7F9F7;
     border-radius: 5px;
     width: 40%;
     height: 10%;
+    min-width: 488px;
+    min-height: 262px;
     margin: auto;
     margin-top: 100px;
-    padding: 2rem;
-    padding-top: 3.8rem;
-
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    
 }
 
 #pokeLogo {
-    position: absolute;
-    width: 16%;
-    height: 13%;
-    left: 41%;
-    top: 40px;
-
+    height: 4.5rem;
+    width: 50%;
+    transform: translate(50%,-70%);
+    min-width: 183px;
+    
+    
 }
 
 #pokemon-finder-form {
@@ -122,6 +128,8 @@ select:focus option:first-of-type {
     border-radius: 5px;
     width: 40%;
     height: 10%;
+    min-width: 488px;
+    min-height: 262px;
     margin: auto;
     margin-top: 25px;
     padding: 2rem;
@@ -141,14 +149,14 @@ h4 {
 #sprite_stats {
     display: flex;
     justify-content: space-between;
-    width: 440px;
+    width: 89%;
 }
 
 #Evo_ab {
     padding-top: 1rem;
     display: flex;
     justify-content: space-between;
-    width: 450px;
+    width: 90%;
 
 }
 

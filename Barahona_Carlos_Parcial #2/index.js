@@ -43,6 +43,8 @@
             query,
             searchType,
           });
+         
+         
           if (searchType == "pokemon") {
             const evolutions = await Utils.getEvolution(
               response.species.url
@@ -54,6 +56,7 @@
 
             );
             response.chain = chain
+
             const renderedTemplate = App.templates.render({
               searchType,
               response,
@@ -63,6 +66,7 @@
             App.htmlElements.pokemonFinderOutput.innerHTML = renderedTemplate;
           }
           else {
+
             const renderedTemplate = App.templates.render({
               searchType,
               response,
@@ -101,10 +105,11 @@
       pokemonCard: ({ id, name, weight, height, abilities, sprites, chain }) => {
         const evoluciones = chain.evolves_to
         const evoArr = []
-        const finalEv = [evoluciones[0]]
         const abilityArr = []
+        const lastEvo = []
         const spriteFront = `<img class="sprite" src="${sprites.front_default}">`
         const spriteBack = `<img class="sprite"  src="${sprites.back_default}">`
+
         for (let i = 0; i < abilities.length; i++) {
           const pleaseWork = abilities[i]
           if (pleaseWork.is_hidden === true) {
@@ -113,28 +118,29 @@
           else { abilityArr.push(`<li>${pleaseWork.ability.name}</li>`) }
         }
 
-        for (let i = 0; i < evoluciones.length; i++) {
-          if (chain.is_baby == true) {
-            evoArr.push(`<li>${chain.species.name}${baby}</li>`)
-          }
-          else { evoArr.push(`<li>${chain.species.name}</li>`) }
-          const iveGotThis = evoluciones[i]
+        if (chain.is_baby == true) {
+          evoArr.push(`<li>${chain.species.name}${baby}</li>`)
+        }
+        else { evoArr.push(`<li>${chain.species.name}</li>`) }
 
+        for (let i = 0; i < evoluciones.length; i++) {
+          
+          const iveGotThis = evoluciones[i]
+           
           if (iveGotThis.evolves_to.is_baby == true) {
             evoArr.push(`<li>${iveGotThis.species.name}${baby}</li>`)
           }
           else { evoArr.push(`<li>${iveGotThis.species.name}</li>`) }
+
+          if(name !== "eevee"){
+            lastEvo[0] = iveGotThis.evolves_to[0]
+             const hereWeGo = lastEvo[0]
+             console.log(hereWeGo)
+             if(typeof hereWeGo !== "undefined"){
+              evoArr.push(`<li>${hereWeGo.species.name}</li>`)}
+              }
+          
         }
-        const lastEvoArr = finalEv[0]
-        console.log[lastEvoArr]
-        if (name !== 'eevee') {
-          const ListElement = lastEvoArr.evolves_to[0]
-
-          console.log(ListElement.species.name)
-          evoArr.push(`<li>${ListElement.species.name}</li>`)
-        }
-
-
 
         const noCommas = abilityArr.join('')
         const noSeparators = evoArr.join('')
