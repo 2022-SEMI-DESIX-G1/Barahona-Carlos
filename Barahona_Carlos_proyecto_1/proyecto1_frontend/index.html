@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="index.css">
+    <title>Pokedex</title>
+</head>
+
+<body>
+    <section class="formulario">
+        <div class="logo">
+            <img src="image.png" />
+        </div>
+        <h1>Pokemon Finder</h1>
+
+        <form id="pokemon-form">
+            <div class="buscador">
+                <div class="busqueda">
+                    <label for="pokemon-input">Name</label>
+                    <input id="pokemon-input" type="text" value="" placeholder="Pokemon Name...">
+                </div>
+                <div class="option_continer">
+                    <div class="options">
+                        <input type="checkbox" id="sprites_id">
+                        <label for="sprites_id"> Sprites</label>
+                    </div>
+                    <div class="options">
+                        <input type="checkbox" id="ubicaciones_id">
+                        <label for="ubicaciones_id">Catch Locations </label>
+                    </div>
+                    <div class="options">
+                        <input type="checkbox" id="evolucion_id">
+                        <label for="evolucion_id">Evolutions</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accion">
+                <div id="resetForm">
+                </div>
+                <div class="search-button" id="search-button">
+                    <button type="submit">Search</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    <section id="pokemon-response"></section>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
